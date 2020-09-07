@@ -3,7 +3,7 @@
 MANAGE_CMD="/webvirtmgr/manage.py"
 DB_FILE="/data/webvirtmgr.sqlite3"
 
-WS_PUBLIC_HOST=${'"'WS_PUBLIC_HOST'"':-None}
+WS_PUBLIC_HOST=${WS_PUBLIC_HOST:-None}
 WS_PORT=${WS_PORT:-6080}
 
 sed -i -e 's/127.0.0.1/0.0.0.0/g' /webvirtmgr/conf/gunicorn.conf.py
