@@ -24,5 +24,7 @@ RUN git clone https://github.com/retspen/webvirtmgr.git && \
 ADD docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+EXPOSE 8000/tcp
+EXPOSE 6080/tcp
 
 CMD [ "/webvirtmgr/manage.py", "run_gunicorn", "-c", "/webvirtmgr/conf/gunicorn.conf.py" ]
