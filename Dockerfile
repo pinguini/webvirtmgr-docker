@@ -10,7 +10,9 @@ RUN yum install -y \
     python-pip \
     libvirt-python \
     numpy \
-    python-websockify
+    python-websockify \
+    libxml2 \
+    libxml2-python
 
 RUN mkdir /data/
 
